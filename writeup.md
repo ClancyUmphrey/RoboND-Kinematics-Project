@@ -27,8 +27,8 @@ You're reading it!
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot and derive its DH parameters.
 
 With the demo flag set to `true` in `kuka_arm/launch/inverse_kinematics.launch`, the forward_kinematics demo can be launched by executing the following commands in a terminal:
-```
-cd /kuka_arm/scripts
+```sh
+cd kuka_arm/scripts
 ./safe_spawner.sh
 ```
 RViz and Gazebo (**Figure 1**) windows are launched, which allow the user to see the full process of the robot arm picking up the target object on the shelf and dropping it in the bin.  Each step of the process is initiated by selecting "Next" in the RViz window.  This project concerns deriving and implementing an inverse kinematics solution for the joint angles necessary to move the robot arm end-effector along planned paths.
@@ -190,16 +190,16 @@ These end-effector error plots are mostly boring because the error is always 0.1
 
 With the demo flag set to `false` in `kuka_arm/launch/inverse_kinematics.launch`, the following three steps can be executed in three separate terminals to run the final project:
 1.  Launch the simulator framework including Gazebo and RViz:
-```
+```sh
 cd kuka_arm/scripts
 ./safe_spawner.sh
 ```
 2.  Run the `IK_server` node:
-```
+```sh
 rosrun kuka_arm IK_server.py
 ```
 3.  Run the `plot_error` node:
-```
+```sh
 rosrun kuka_arm plot_error.py
 ```
 From here the simulation can be advanced through each step of the process by selecting "Next" in the RViz window.  Each time a path is planned as displayed in **Figure 6**, the `IK_server` node provides necessary joint angles to follow the path, and the `plot_error` node plots the error between the forward kinematics solution and the requested end-effector positions.
