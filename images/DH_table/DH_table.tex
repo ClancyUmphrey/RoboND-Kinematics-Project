@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{euler}
+
+\begin{document}
+
+
+%\begin{center}
+%DH Parameters Table for the Kuka KR210 Robotic Arm
+%\end{center}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{ l c c c c }
+\hline
+$^{i-1}_{i}T$ & $\alpha_{i-1}$ & $a_{i-1}$ & $d_{i}$ & $\theta_{i}$ \\ 
+\hline\hline
+$^{0}_{1}T$   & $0$            & $0$       & $0.75$  & $\theta_{1}$         \\  
+$^{1}_{2}T$   & $-\pi/2$       & $0.35$    & $0$     & $\theta_{2} - \pi/2$ \\  
+$^{2}_{3}T$   & $0$            & $1.25$    & $0$     & $\theta_{3}$         \\  
+$^{3}_{4}T$   & $-\pi/2$       & $-0.054$  & $1.50$  & $\theta_{4}$         \\  
+$^{4}_{5}T$   & $ \pi/2$       & $0$       & $0$     & $\theta_{5}$         \\  
+$^{5}_{6}T$   & $-\pi/2$       & $0$       & $0$     & $\theta_{6}$         \\  
+$^{6}_{7}T$   & $0$            & $0$       & $0.303$ & $0$                  \\  
+\hline
+\end{tabular}
+\end{center}
+
+
+\end{document}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Follows the source code from sympy:
+# http://docs.sympy.org/latest/_modules/sympy/printing/preview.html
+# dvipng options:
+# http://www.nongnu.org/dvipng/dvipng_4.html
+
+latex -halt-on-error -interaction=nonstopmode DH_table.tex
+#dvipng -T tight -D 200 -z 9 --truecolor -bg transparent -o test.png test.dvi
+#dvipng -T tight -D 150 -z 1  --freetype off  -Q 400 -o DH_table.png DH_table.dvi
+dvipng -T tight -D 150 -z 9 --truecolor -o DH_table.png DH_table.dvi
+
+rm DH_table.aux  DH_table.dvi  DH_table.log
+
